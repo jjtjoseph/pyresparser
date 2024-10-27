@@ -1,9 +1,23 @@
 from setuptools import setup, find_packages
 from os import path
+import os
+import nltk
 
 here = path.abspath(path.dirname(__file__))
+# Install SpaCy Dependencies
+os.system('python -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz')
+
+# Install nltk Dependencies
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+
 
 setup(
+
     name='pyresparser',
     version='2.0.0',
     description='A simple resume parser used for extracting information from resumes',
