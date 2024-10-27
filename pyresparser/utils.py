@@ -344,7 +344,7 @@ def extract_name(nlp_text, matcher):
     :return: string of full name
     '''
 
-    matcher.add('NAME', cs.NAME_PATTERN)
+    matcher.add('NAME', [cs.NAME_PATTERN])
 
     matches = matcher(nlp_text)
 
