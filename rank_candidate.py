@@ -5,6 +5,7 @@ import pandas as pd
 import spacy
 
 
+
 def get_candidate_score(
         job_skill_count: int,
         job_skills: Set[str],

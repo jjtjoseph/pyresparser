@@ -1,5 +1,6 @@
 # CLI
 
+
 `pyresparser` comes with a **cli** option which you can use right away in your terminal
 
 ```bash

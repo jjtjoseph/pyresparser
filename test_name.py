@@ -39,3 +39,4 @@ def test_local_name():
 def test_local_phone_number():
     data = get_local_data()
     assert '8087996634' == data['mobile_number']
+

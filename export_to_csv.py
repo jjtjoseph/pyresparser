@@ -6,6 +6,7 @@ import sys
 import csv
 import os
 
+
 result = []
 fields = ['Date', 'Skills', 'Name', 'Contact Number', 'Email ID', 'Current Company', 'Experience', 'College Name', 'Designation', 'Filename']
 

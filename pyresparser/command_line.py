@@ -12,6 +12,7 @@ from urllib.request import Request, urlopen
 from pyresparser import ResumeParser
 
 
+
 def print_cyan(text):
     print("\033[96m {}\033[00m" .format(text))
 

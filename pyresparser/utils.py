@@ -19,6 +19,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
 
+
 def extract_text_from_pdf(pdf_path):
     '''
     Helper function to extract the plain text from .pdf files

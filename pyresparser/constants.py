@@ -1,5 +1,6 @@
 from nltk.corpus import stopwords
 
+
 # Omkar Pathak
 NAME_PATTERN = [{'POS': 'PROPN'}, {'POS': 'PROPN'}]
 

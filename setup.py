@@ -57,4 +57,5 @@ setup(
     entry_points = {
         'console_scripts': ['pyresparser=pyresparser.command_line:main'],
     }
+
 )
