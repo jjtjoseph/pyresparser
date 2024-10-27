@@ -1,23 +1,21 @@
 from setuptools import setup, find_packages
+from setuptools.command.install import install
 from os import path
-import os
-import nltk
+import subprocess
 
 here = path.abspath(path.dirname(__file__))
-# Install SpaCy Dependencies
-os.system('python -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz')
 
-# Install nltk Dependencies
-nltk.download('maxent_ne_chunker')
-nltk.download('words')
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
+
+class CustomInstall(install):
+    def run(self):
+        # Run the standard install process
+        install.run(self)
+
+        # Run the pre_requisites script
+        subprocess.call(['python', 'pre_requisites.py'])  # Ensure the script path is correct
 
 
 setup(
-
     name='pyresparser',
     version='2.0.0',
     description='A simple resume parser used for extracting information from resumes',
@@ -68,8 +66,10 @@ setup(
         'wasabi>=0.2.2'
     ],
     zip_safe=False,
-    entry_points = {
+    entry_points={
         'console_scripts': ['pyresparser=pyresparser.command_line:main'],
-    }
-
+    },
+    cmdclass={
+        'install': CustomInstall,  # Use the custom install class
+    },
 )
