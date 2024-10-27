@@ -343,9 +343,8 @@ def extract_name(nlp_text, matcher):
     :param matcher: object of `spacy.matcher.Matcher`
     :return: string of full name
     '''
-    pattern = cs.NAME_PATTERN
 
-    matcher.add('NAME', pattern)
+    matcher.add('NAME', cs.NAME_PATTERN)
 
     matches = matcher(nlp_text)
 
