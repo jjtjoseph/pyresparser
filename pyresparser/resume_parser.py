@@ -91,9 +91,9 @@ class ResumeParser(object):
                     self.__noun_chunks,
                     self.__skills_file
                 )
-        edu = utils.extract_education(
-                      [sent.string.strip() for sent in self.__nlp.sents]
-              )
+        #edu = utils.extract_education(
+        #              [sent.string.strip() for sent in self.__nlp.sents]
+        #      )
         entities = utils.extract_entity_sections_grad(self.__text_raw)
 
         # extract name
